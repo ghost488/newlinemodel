@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>ModelPlus</class>
+ <widget class="QWidget" name="ModelPlus">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>502</width>
-    <height>457</height>
+    <height>459</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>모델 추가하기</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="submitButton">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -26,7 +26,7 @@
     <string>추가</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="cancelButton">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -39,7 +39,7 @@
     <string>취소</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -57,11 +57,15 @@
      </widget>
     </item>
     <item>
-     <widget class="QCalendarWidget" name="calendarWidget"/>
+     <widget class="QCalendarWidget" name="operationDate">
+      <property name="gridVisible">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -81,7 +85,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="nameValue"/>
       </item>
      </layout>
     </item>
@@ -95,7 +99,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="numberValue"/>
       </item>
      </layout>
     </item>
@@ -109,7 +113,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="councilValue"/>
       </item>
      </layout>
     </item>
@@ -123,12 +127,15 @@
        </widget>
       </item>
       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <widget class="QLineEdit" name="operatorValue"/>
       </item>
      </layout>
     </item>
     <item>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="opCase">
+      <property name="minimumContentsLength">
+       <number>0</number>
+      </property>
       <item>
        <property name="text">
         <string>복합수술 케이스</string>
